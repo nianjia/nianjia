@@ -1,0 +1,7 @@
+language: rust
+rust: stable
+dist: trusty
+
+git:
+  depth: 1
+

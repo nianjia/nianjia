@@ -76,3 +76,6 @@ fn handle_cause(nianjia_err: &Error, shell: &mut Shell) -> bool {
 
     true
 }
+
+pub const NIANJIA_ENV: &str = "NIANJIA";
+
