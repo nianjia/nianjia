@@ -8,8 +8,8 @@ pub fn builtin() -> Vec<App> {
 }
 
 pub fn builtin_exec(cmd: &str) -> Option<fn(&mut Config, &ArgMatches<'_>) -> CliResult> {
-    let f = match cmd {
+    let _f = match cmd {
         _ => return None,
     };
-    Some(f)
+    // Some(_f)
 }
