@@ -61,7 +61,6 @@ features = [
 
 [[bin]]
 name = "nianjia"
-path = "bin/main.rs"
 test = false
 doc = false
 
