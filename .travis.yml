@@ -1,6 +1,9 @@
 language: rust
 rust: stable
-dist: trusty
+os:
+  - windows
+  - linux
+  - osx
 
 git:
   depth: 1

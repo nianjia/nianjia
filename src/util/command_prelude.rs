@@ -1,8 +1,10 @@
 use std::path::PathBuf;
-use clap;
-pub use clap::{AppSettings, Arg, ArgMatches};
+
+use clap::{self, SubCommand};
 
 use crate::util::config::Config;
+
+pub use clap::{AppSettings, Arg, ArgMatches};
 
 pub type App = clap::App<'static, 'static>;
 
@@ -39,4 +41,12 @@ impl<'a> ArgMatchesExt for ArgMatches<'a> {
     fn _value_of(&self, name: &str) -> Option<&str> {
         self.value_of(name)
     }
+}
+
+pub fn subcommand(name: &'static str) -> App {
+    SubCommand::with_name(name).settings(&[
+        AppSettings::UnifiedHelpMessage,
+        AppSettings::DeriveDisplayOrder,
+        AppSettings::DontCollapseArgsInUsage,
+    ])
 }
